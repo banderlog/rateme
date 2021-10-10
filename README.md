@@ -3,6 +3,8 @@
 RateMe is a neural network that allows you to recognize gestures of thumb up and thumb down.
 The algorithm can be embedded in your project and automate the process of evaluation of something or someone.
 
+![](https://raw.githubusercontent.com/heyml/rateme/master/gifs/Algorithm.gif)
+
 ## Dependencies
 
 + numpy
