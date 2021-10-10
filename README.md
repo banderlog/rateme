@@ -1,44 +1,14 @@
 # Rating system using computer vision
 
-<a href="https://heyml.com"><img align="left" height="60" src="gifs/heyml.png"></a><br><br><br>
-
 RateMe is a neural network that allows you to recognize gestures of thumb up and thumb down.
 The algorithm can be embedded in your project and automate the process of evaluation of something or someone.
 
-![](gifs/Algorithm.gif)
+## Dependencies
 
-For example, using Rate Me you can:
++ numpy
++ opencv-python-inference-engine>=2021-10-10
 
-+ Rate music on the YouTube Music service, when you are uncomfortable with clicking buttons
-
-    ![](gifs/YouTube.gif)
-
-+ Count the votes in a beauty contest to determine the winner
-
-    ![](gifs/Street.gif)
-
-+ Rate drinks and meals during their tasting
-
-    ![](gifs/Wine.gif)
-
-## Technical part
-
-### Dependencies
-
-+ `opencv-python`, `numpy`;
-
-+ `matplotlib`, `jupyter` for jupyter-notebook
-
-### Installation
-
-`pip3 install rateme`
-
-### Usage
-
-Open `Test_RateMe.ipynb` to test RateMe on example images 
-(for that you need to start `jupyter-notebook`, it will open window in your browser, where you need to select `Test_RateMe.ipynb`).
-
-For example of realtime detection run `detect_on_webcam.py`.
+## Usage
 
 Minimal working example:
 
@@ -51,7 +21,7 @@ img = cv2.imread('test_imgs/like.jpg')
 label = net.predict(img)
 ```
 
-### Description
+## Description
 
 RateMe is based on [tiny-YOLOv3](https://pjreddie.com/darknet/yolo/) architecture. 
 
@@ -69,3 +39,12 @@ Full pipeline speed is 6-7 FPS on Intel(R) Core(TM) i5-4300M CPU @ 2.60GHz.
 ~100ms on frame grabbing
 
 ~100ms on neural network inference
+
+
+## Package creation
+
+```
+cp -dr rateme create_package/
+cd create_package
+python setup.py sdist
+```

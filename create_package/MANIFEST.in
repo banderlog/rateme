@@ -1,0 +1,2 @@
+recursive-include rateme *.weights
+recursive-include rateme *.cfg
