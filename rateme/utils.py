@@ -32,7 +32,7 @@ class YOLO3:
             self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_MYRIAD)
         # get proper output layers
         ln = self.net.getLayerNames()
-        self.ln = [ln[i[0] - 1] for i in self.net.getUnconnectedOutLayers()]
+        self.ln = [ln[i - 1] for i in self.net.getUnconnectedOutLayers()]
         # define classes
         self.classes = classes
 
